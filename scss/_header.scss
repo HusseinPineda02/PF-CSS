@@ -1,0 +1,46 @@
+header{
+    background-color:$negro;
+    box-shadow:$sombra;
+    padding:15px 40px;
+
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .logo{
+
+        h2{
+            color:$blanco;
+            font-size:28px;
+            cursor:pointer;
+            transition:$transicion;
+
+            &:hover{
+                color:$rojo-utp;
+                transform:scale(1.05);
+            }
+        }
+    }
+
+    .menu{
+        display:flex;
+        gap:30px;
+        align-items:center;
+
+        a{
+            color:$blanco;
+            font-weight:bold;
+            transition:$transicion;
+
+            &:hover{
+                color:$rojo-utp;
+            }
+        }
+
+        .active{
+            color:$rojo-utp;
+        }
+    }
+}

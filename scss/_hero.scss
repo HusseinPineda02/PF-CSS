@@ -1,0 +1,34 @@
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+    padding:60px 80px;
+    background:$blanco;
+    animation:aparecer .8s ease;
+}
+
+.hero-texto{
+
+    h1{
+        font-size:42px;
+        margin-bottom:20px;
+        color:$negro;
+    }
+
+    p{
+        color:$gris-oscuro;
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:30px;
+    }
+}
+
+.hero-img{
+
+    img{
+        width:100%;
+        border-radius:$radio;
+        box-shadow:$sombra;
+    }
+}

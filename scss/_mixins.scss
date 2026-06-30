@@ -1,0 +1,30 @@
+@mixin boton{
+    background-color:$rojo-utp;
+    color:$blanco;
+    padding:12px 25px;
+    border:none;
+    border-radius:$radio;
+    text-decoration:none;
+    cursor:pointer;
+    transition:$transicion;
+}
+
+@mixin card{
+    background:$blanco;
+    border-radius:$radio;
+    padding:20px;
+    box-shadow:$sombra;
+    overflow:hidden;
+}
+
+@mixin flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@mixin grid($columnas){
+    display:grid;
+    grid-template-columns:repeat($columnas,1fr);
+    gap:30px;
+}

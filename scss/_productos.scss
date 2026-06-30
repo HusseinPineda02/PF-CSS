@@ -1,0 +1,50 @@
+.productos-destacados,
+.productos-recientes{
+    padding: 60px 80px;
+    animation:aparecer 1s ease;
+    h2{
+        text-align: center;
+        margin-bottom: 40px;
+        color: $negro;
+    }
+}
+
+.productos-grid{
+    @include grid(4);
+}
+
+.producto-card{
+    @include card;
+    text-align: center;
+    transition: $transicion;
+
+    img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: $radio;
+        margin-bottom: 15px;
+    }
+
+    h3{
+        margin-bottom: 10px;
+        color: $negro;
+    }
+
+    .vendedor{
+        color: $gris-oscuro;
+        margin-bottom: 10px;
+    }
+
+    .precio{
+        font-size: 22px;
+        font-weight: bold;
+        color: $rojo-utp;
+        margin-bottom: 20px;
+    }
+
+    &:hover{
+        transform:translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    }
+}

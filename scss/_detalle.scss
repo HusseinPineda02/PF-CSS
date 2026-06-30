@@ -1,0 +1,52 @@
+.detalle-producto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 80px;
+    align-items: center;
+}
+
+.producto-imagen{
+
+    img{
+        width: 100%;
+        border-radius: $radio;
+        box-shadow: $sombra;
+        transition: $transicion;
+
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+}
+
+.producto-info{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    h1{
+        font-size: 36px;
+        color: $negro;
+    }
+
+    .categoria{
+        color: $gris-oscuro;
+        font-weight: bold;
+    }
+
+    .vendedor{
+        color: $gris-oscuro;
+    }
+
+    .precio{
+        font-size: 32px;
+        color: $rojo-utp;
+        font-weight: bold;
+    }
+
+    .descripcion{
+        line-height: 1.6;
+        color: $gris-oscuro;
+    }
+}

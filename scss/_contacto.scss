@@ -1,0 +1,95 @@
+.contacto{
+    padding: 60px 80px;
+    h1{
+        text-align: center;
+        margin-bottom: 20px;
+        color: $negro;
+    }
+    p{
+        text-align: center;
+        color: $gris-oscuro;
+        margin-bottom: 40px;
+    }
+}
+
+.contacto-contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.informacion{
+
+    @include card;
+
+    h2{
+        margin-bottom: 20px;
+        color: $negro;
+    }
+
+    p{
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+}
+
+.formulario{
+    @include card;
+
+    h2{
+        margin-bottom: 20px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input,
+    textarea{
+
+        padding: 12px;
+        border: 1px solid $gris-claro;
+        border-radius: $radio;
+        transition: $transicion;
+
+        &:focus{
+
+            outline: none;
+            border-color: $rojo-utp;
+        }
+    }
+
+    .boton{
+
+        align-self: flex-start;
+    }
+}
+
+.redes{
+    padding: 50px 80px;
+    text-align: center;
+
+    h2{
+        margin-bottom: 30px;
+    }
+}
+
+.redes-contenido{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    a{
+        color: $rojo-utp;
+        font-weight: bold;
+        transition: $transicion;
+
+        &:hover{
+            color: $rojo-hover;
+            transform: scale(1.08);
+        }
+    }
+}

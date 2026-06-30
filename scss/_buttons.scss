@@ -1,0 +1,14 @@
+.boton{
+    @include boton;
+    display:inline-block;
+    text-align:center;
+
+    &:hover{
+        background:$rojo-hover;
+        animation:balanceo .5s;
+    }
+
+    &:active{
+        transform:scale(.95);
+    }
+}
