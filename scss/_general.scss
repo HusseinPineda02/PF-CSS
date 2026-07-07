@@ -9,9 +9,9 @@ html{
 }
 
 body{
-    font-family:$fuente-principal;
-    background:$gris-claro;
-    color:$negro;
+    font-family: $fuente-principal;
+    background-color: $gris-claro;
+    color: $negro;
 }
 
 a{
@@ -29,5 +29,7 @@ img{
 }
 
 main{
-    min-height:100vh;
+    min-height: 100vh;
+    -webkit-animation: aparecer .6s ease;
+    animation: aparecer .6s ease;
 }

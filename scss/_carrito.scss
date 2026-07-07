@@ -1,5 +1,7 @@
 .carrito{
-    padding: 60px 80px;
+    padding: 60px 50px;
+    max-width: 1300px;
+    margin: auto;
 
     h1{
         text-align: center;
@@ -12,12 +14,13 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
+    align-items: start;
 }
 
 .lista-productos{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .producto-carrito{
@@ -25,10 +28,11 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: $transicion;
 
     img{
-        width: 140px;
-        height: 140px;
+        width: 130px;
+        height: 120px;
         object-fit: cover;
         border-radius: $radio;
     }
@@ -44,8 +48,46 @@
 
     .precio{
         color: $rojo-utp;
-        font-size: 22px;
+        font-size: 21px;
         font-weight: bold;
+    }
+
+    &:hover{
+        transform: translateX(5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    }
+}
+
+.controles-cantidad{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+
+    button{
+        padding: 7px 12px;
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        background-color: $gris-claro;
+        color: $negro;
+        font-weight: bold;
+        cursor: pointer;
+        transition: $transicion;
+
+        &:hover{
+            background-color: #d8d8d8;
+            transform: scale(1.08);
+        }
+    }
+
+    .eliminar{
+        background-color: $rojo-utp;
+        color: $blanco;
+        border-color: $rojo-utp;
+
+        &:hover{
+            background-color: $rojo-hover;
+        }
     }
 }
 
@@ -53,13 +95,17 @@
     @include card;
     height: fit-content;
     text-align: center;
+    position: sticky;
+    top: 30px;
 
     h2{
         margin-bottom: 25px;
     }
+
     p{
         margin-bottom: 15px;
     }
+
     .precio{
         color: $rojo-utp;
         font-size: 24px;
@@ -67,14 +113,31 @@
     }
 
     .boton{
-
         display: block;
         margin-top: 25px;
+        animation: pulso 1.8s infinite;
 
         &:hover{
-
             background-color: $rojo-hover;
+            animation-play-state: paused;
             transform: scale(1.05);
         }
+    }
+}
+
+.vaciar-carrito{
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    background-color: transparent;
+    color: $gris-oscuro;
+    border: 1px solid $gris-oscuro;
+    border-radius: $radio;
+    cursor: pointer;
+    transition: $transicion;
+
+    &:hover{
+        color: $rojo-utp;
+        border-color: $rojo-utp;
     }
 }

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>UTP Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -50,7 +55,7 @@
         </section>
 
         <section class="categorias">
-            <h2>Categorías</h2>
+            <h2 class="text-3xl font-bold">Categorías</h2>
             <div class="categorias-grid">
                  <div class="categoria-card">
                     <img src="img/libros.jpg" alt="Libros">
@@ -75,80 +80,20 @@
             </div>
         </section>
 
-        <section class="productos-destacados">
-            <h2>Productos destacados</h2>
-            <div class="productos-grid">
-                <div class="producto-card">
-                    <img src="img/producto1.jpg" alt="Producto">
-                    <h3>Laptop Lenovo</h3>
-                    <p class="vendedor">Vendedor: Andrea</p>
-                    <p class="precio">S/. 1850</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
+    <section class="productos-destacados">
+        <h2 class="text-3xl font-bold">Productos destacados</h2>
 
-                <div class="producto-card">
-                    <img src="img/producto2.jpg" alt="Producto">
-                    <h3>Calculadora Casio</h3>
-                    <p class="vendedor">Vendedor: Diego</p>
-                    <p class="precio">S/. 90</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
+        <div class="productos-grid" id="productos-destacados">
+        </div>
+    </section>
 
-                <div class="producto-card">
-                    <img src="img/producto3.jpg" alt="Producto">
-                    <h3>Libro de Física</h3>
-                    <p class="vendedor">Vendedor: María</p>
-                    <p class="precio">S/. 45</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
+    <section class="productos-recientes">
+        <h2 class="text-3xl font-bold">Productos recientes</h2>
 
-                <div class="producto-card">
-                    <img src="img/producto4.jpg" alt="Producto">
-                    <h3>Mochila</h3>
-                    <p class="vendedor">Vendedor: Carlos</p>
-                    <p class="precio">S/. 80</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-            </div>
+        <div class="productos-grid" id="productos-recientes">
+        </div>
+    </section>
 
-        </section>
-
-        <section class="productos-recientes">
-            <h2>Productos recientes</h2>
-            <div class="productos-grid">
-                <div class="producto-card">
-                    <img src="img/producto5.jpg" alt="Producto">
-                    <h3>Tablet Samsung</h3>
-                    <p class="precio">S/. 550</p>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto6.jpg" alt="Producto">
-                    <h3>Audífonos</h3>
-                    <p class="precio">S/. 75</p>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto7.jpg" alt="Producto">
-                    <h3>Guitarra</h3>
-                    <p class="precio">S/. 400</p>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto8.jpg" alt="Producto">
-                    <h3>Mouse Logitech</h3>
-                    <p class="precio">S/. 60</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -159,6 +104,9 @@
             Hussein Pineda - 2026 All Rights Reserved
         </p>
     </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/inicio.js"></script>
 
 </body>
 

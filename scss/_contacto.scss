@@ -1,14 +1,20 @@
 .contacto{
-    padding: 60px 80px;
+    padding: $padding-seccion;
+    max-width: 1200px;
+    margin: auto;
+
     h1{
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         color: $negro;
     }
-    p{
+
+    > p{
         text-align: center;
         color: $gris-oscuro;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
+        max-width: 700px;
+        line-height: 1.5;
     }
 }
 
@@ -19,67 +25,81 @@
 }
 
 .informacion{
-
     @include card;
 
     h2{
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         color: $negro;
     }
 
     p{
         text-align: left;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
+        color: $gris-oscuro;
     }
 
+    strong{
+        color: $negro;
+    }
 }
 
 .formulario{
     @include card;
 
     h2{
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        color: $negro;
     }
 
     form{
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    label{
+        font-weight: bold;
+        margin-top: 5px;
     }
 
     input,
     textarea{
-
         padding: 12px;
-        border: 1px solid $gris-claro;
+        border: 1px solid #cccccc;
         border-radius: $radio;
         transition: $transicion;
+        font-family: $fuente-principal;
 
         &:focus{
-
             outline: none;
             border-color: $rojo-utp;
+            box-shadow: 0 0 5px rgba(215,25,32,.25);
         }
     }
 
-    .boton{
+    textarea{
+        resize: vertical;
+    }
 
+    .boton{
         align-self: flex-start;
+        margin-top: 10px;
     }
 }
 
 .redes{
-    padding: 50px 80px;
+    padding: 40px 80px 60px;
     text-align: center;
 
     h2{
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 }
 
 .redes-contenido{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 25px;
 
     a{

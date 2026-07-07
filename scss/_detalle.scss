@@ -2,16 +2,25 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    padding: 60px 80px;
+    padding: $padding-seccion;
+    max-width: 1250px;
+    margin: auto;
     align-items: center;
 }
 
 .producto-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img{
         width: 100%;
+        max-width: 550px;
+        height: 420px;
+        object-fit: contain;
         border-radius: $radio;
         box-shadow: $sombra;
+        background-color: $blanco;
         transition: $transicion;
 
         &:hover{

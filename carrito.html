@@ -2,21 +2,23 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Carrito | UTP Marketplace</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
     <header>
-
         <nav class="navbar">
 
             <div class="logo">
@@ -31,74 +33,64 @@
             </ul>
 
         </nav>
-
     </header>
 
     <main>
 
         <section class="carrito">
 
-            <h1>Carrito de compras</h1>
+            <h1 class="text-3xl font-bold">
+                Carrito de compras
+            </h1>
 
             <div class="carrito-contenido">
 
-                <div class="lista-productos">
+                <div class="lista-productos" id="lista-carrito">
 
-                    <div class="producto-carrito">
-
-                        <img src="img/producto1.jpg" alt="Laptop Lenovo">
-                        <div>
-                            <h3>Laptop Lenovo</h3>
-                            <p class="cantidad">Cantidad: 1</p>
-                            <p class="precio">S/. 1850</p>
-                        </div>
-                    </div>
-
-                    <div class="producto-carrito">
-                        <img src="img/producto3.jpg" alt="Libro">
-                        <div>
-                            <h3>Libro de Física</h3>
-                            <p class="cantidad">Cantidad: 1</p>
-                            <p class="precio">S/. 45</p>
-                        </div>
-                    </div>
-
-                    <div class="producto-carrito">
-                        <img src="img/producto6.jpg" alt="Audífonos">
-                        <div>
-                            <h3>Audífonos Bluetooth</h3>
-                            <p class="cantidad">Cantidad: 1</p>
-                            <p class="precio">S/. 75</p>
-                        </div>
-                    </div>
                 </div>
 
                 <aside class="resumen-compra">
 
-                    <h2>Resumen</h2>
-                    <p>Subtotal: <strong>S/. 1970</strong></p>
-                    <p>IGV: <strong>S/. 354.60</strong></p>
-                    <hr>
-                    <p class="precio">
-                        Total: <strong>S/. 2324.60</strong>
+                    <h2 class="text-2xl font-bold mb-4">Resumen</h2>
+
+                    <p>
+                        Subtotal:
+                        <strong id="subtotal">S/. 0</strong>
                     </p>
-                    <a href="#" class="boton">
+
+                    <p>
+                        IGV:
+                        <strong id="igv">S/. 0</strong>
+                    </p>
+
+                    <hr>
+
+                    <p class="precio">
+                        Total:
+                        <strong id="total">S/. 0</strong>
+                    </p>
+
+                    <a href="#" class="boton w-full">
                         Finalizar compra
                     </a>
+                    <button class="vaciar-carrito" onclick="vaciarCarrito()">
+                        Vaciar carrito
+                    </button>
+
                 </aside>
+
             </div>
+
         </section>
 
     </main>
 
     <footer class="footer">
-         <p>
-            UTP Marketplace
-        </p>
-        <p>
-            Hussein Pineda - 2026 All Rights Reserved
-        </p>
+        <p>UTP Marketplace</p>
+        <p>Hussein Pineda - 2026 All Rights Reserved</p>
     </footer>
+
+    <script src="js/carrito.js"></script>
 
 </body>
 

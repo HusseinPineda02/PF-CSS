@@ -2,21 +2,23 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Productos | UTP Marketplace</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
     <header>
-
         <nav class="navbar">
 
             <div class="logo">
@@ -31,148 +33,42 @@
             </ul>
 
         </nav>
-
     </header>
 
     <main>
 
         <section class="catalogo">
-            <h1>Catálogo de productos</h1>
-            <p>
+            <h1 class="text-4xl font-bold">Catálogo de productos</h1>
+            <p class="mt-4">
                 Explora los productos publicados por estudiantes de la Universidad Tecnológica del Perú.
             </p>
         </section>
 
-
         <section class="busqueda">
 
-            <input type="text" placeholder="Buscar producto">
+            <input type="text" id="buscar" placeholder="Buscar producto">
 
-            <select>
-                <option>Todas las categorías</option>
-                <option>Libros</option>
-                <option>Tecnología</option>
-                <option>Calculadoras</option>
-                <option>Accesorios</option>
+            <select id="categoria">
+                <option value="Todos">Todas las categorías</option>
+                <option value="Libros">Libros</option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Calculadoras">Calculadoras</option>
+                <option value="Accesorios">Accesorios</option>
+                <option value="Instrumentos">Instrumentos</option>
             </select>
 
-            <select>
-                <option>Más recientes</option>
-                <option>Precio: menor a mayor</option>
-                <option>Precio: mayor a menor</option>
+            <select id="orden">
+                <option value="normal">Más recientes</option>
+                <option value="menor">Precio: menor a mayor</option>
+                <option value="mayor">Precio: mayor a menor</option>
             </select>
 
         </section>
 
-
         <section class="productos">
 
-            <div class="productos-grid">
+            <div class="productos-grid" id="lista-productos">
 
-                <div class="producto-card">
-                    <img src="img/producto1.jpg" alt="Laptop Lenovo">
-
-                    <h3>Laptop Lenovo</h3>
-
-                    <p class="categoria">Tecnología</p>
-                    <p class="vendedor">Vendedor: Andrea</p>
-                    <p class="precio">S/. 1850</p>
-
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto2.jpg" alt="Calculadora">
-
-                    <h3>Calculadora Casio</h3>
-
-                    <p class="categoria">Calculadoras</p>
-                    <p class="vendedor">Vendedor: Diego</p>
-                    <p class="precio">S/. 90</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto3.jpg" alt="Libro">
-
-                    <h3>Libro de Física</h3>
-
-                    <p class="categoria">Libros</p>
-                    <p class="vendedor">Vendedor: María</p>
-                    <p class="precio">S/. 45</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto4.jpg" alt="Mochila">
-
-                    <h3>Mochila</h3>
-
-                    <p class="categoria">Accesorios</p>
-                    <p class="vendedor">Vendedor: Carlos</p>
-                    <p class="precio">S/. 80</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto5.jpg" alt="Tablet">
-
-                    <h3>Tablet Samsung</h3>
-
-                    <p class="categoria">Tecnología</p>
-                    <p class="vendedor">Vendedor: José</p>
-                    <p class="precio">S/. 550</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto6.jpg" alt="Audífonos">
-
-                    <h3>Audífonos</h3>
-
-                    <p class="categoria">Accesorios</p>
-                    <p class="vendedor">Vendedor: Lucía</p>
-                    <p class="precio">S/. 75</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto7.jpg" alt="Guitarra">
-
-                    <h3>Guitarra</h3>
-
-                    <p class="categoria">Instrumentos</p>
-                    <p class="vendedor">Vendedor: Pedro</p>
-                    <p class="precio">S/. 400</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
-
-                <div class="producto-card">
-                    <img src="img/producto8.jpg" alt="Mouse">
-
-                    <h3>Mouse Logitech</h3>
-
-                    <p class="categoria">Tecnología</p>
-                    <p class="vendedor">Vendedor: Daniela</p>
-                    <p class="precio">S/. 60</p>
-                    <a href="detalle.html" class="boton">
-                        Ver detalle
-                    </a>
-                </div>
             </div>
 
         </section>
@@ -183,6 +79,9 @@
         <p>UTP Marketplace</p>
         <p>Hussein Pineda - 2026 All Rights Reserved</p>
     </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/catalogo.js"></script>
 
 </body>
 
