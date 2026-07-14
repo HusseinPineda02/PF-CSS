@@ -2,10 +2,11 @@ const destacados = document.getElementById("productos-destacados");
 const recientes = document.getElementById("productos-recientes");
 
 function crearTarjeta(producto){
+
     return `
         <div class="producto-card">
 
-            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <img src="/${producto.imagen}" alt="${producto.nombre}">
 
             <h3>${producto.nombre}</h3>
 
@@ -23,18 +24,23 @@ function crearTarjeta(producto){
 
         </div>
     `;
+
 }
 
 fetch("/api/productos")
 .then(response => response.json())
-.then(productos =>{
+.then(productos=>{
 
     productos.slice(0,4).forEach(producto=>{
+
         destacados.innerHTML+=crearTarjeta(producto);
+
     });
 
     productos.slice(4,8).forEach(producto=>{
+
         recientes.innerHTML+=crearTarjeta(producto);
+
     });
 
 });

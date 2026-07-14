@@ -27,6 +27,7 @@
     text-align: center;
     transition: $transicion;
     animation: aparecer .5s ease;
+    border:1px solid transparent;
 
     img{
         width: 100%;
@@ -67,6 +68,8 @@
         transform: scale(1.03);
         box-shadow: 0 10px 25px rgba(0,0,0,.2);
     }
+    border-color:#dddddd;
+    border:1px solid transparent;
 }
 
 .productos-relacionados{

@@ -1,11 +1,23 @@
 .footer{
-    background-color: $negro;
-    color: $blanco;
-    text-align: center;
-    padding: 25px;
-    margin-top: 60px;
-    
+
+    background:$negro;
+
+    color:$blanco;
+
+    padding:35px;
+
+    text-align:center;
+
+    margin-top:70px;
+
+    border-top:4px solid $rojo-utp;
+
     p{
-        margin: 8px 0;
+
+        margin:8px;
+
+        color:#dddddd;
+
     }
+
 }

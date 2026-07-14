@@ -42,5 +42,32 @@ header{
         .active{
             color:$rojo-utp;
         }
+        position:relative;
+
+        &::after{
+
+            content:"";
+
+            position:absolute;
+
+            left:0;
+
+            bottom:-6px;
+
+            width:0;
+
+            height:2px;
+
+            background:$rojo-utp;
+
+            transition:$transicion;
+
+        }
+
+        &:hover::after{
+
+            width:100%;
+
+        }
     }
 }

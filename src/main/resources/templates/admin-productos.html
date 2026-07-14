@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Administrar productos</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>UTP Marketplace | Administrador </h2>
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="/admin">Panel</a></li>
+
+            <li><a href="/admin/nuevo">Nuevo producto</a></li>
+
+            <li><a href="/logout">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section class="productos">
+
+<h1 style="text-align:center;margin-bottom:40px;">
+
+Administración de productos
+
+</h1>
+
+<div class="productos-grid">
+
+<div
+class="producto-card"
+th:each="producto : ${productos}">
+
+<img
+    th:src="@{'/' + ${producto.imagen}}"
+    th:alt="${producto.nombre}">
+
+<h3 th:text="${producto.nombre}"></h3>
+
+<p class="categoria"
+th:text="${producto.categoria}">
+</p>
+
+<p class="precio">
+
+S/.
+
+<span th:text="${producto.precio}"></span>
+
+</p>
+
+<div
+style="display:flex;gap:10px;justify-content:center;">
+
+<a
+class="boton-pequeno"
+
+th:href="@{/admin/editar/{id}(id=${producto.id})}">
+
+Editar
+
+</a>
+
+<a
+class="boton-pequeno"
+
+style="background:#555;"
+
+th:href="@{/admin/eliminar/{id}(id=${producto.id})}"
+
+onclick="return confirm('¿Eliminar producto?')">
+
+Eliminar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</body>
+
+</html>

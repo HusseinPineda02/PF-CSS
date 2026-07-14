@@ -25,7 +25,7 @@ function mostrarProductos(lista) {
         listaProductos.innerHTML += `
             <div class="producto-card">
 
-                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <img src="/${producto.imagen}" alt="${producto.nombre}">
 
                 <h3>${producto.nombre}</h3>
 
