@@ -141,13 +141,12 @@
     .busqueda{
         flex-direction: column;
         padding: 0 25px;
-
         input,
         select{
             width: 100%;
         }
     }
-
+    
     .carrito{
         padding: 40px 25px;
     }
@@ -155,26 +154,36 @@
     .producto-carrito{
         flex-direction: column;
         text-align: center;
-
         img{
             width: 100%;
             height: 200px;
         }
     }
-
     .controles-cantidad{
         justify-content: center;
     }
-
     .contacto{
         padding: 40px 25px;
     }
-
     .redes{
         padding: 40px 25px;
     }
-
     .footer{
         margin-top: 40px;
+    }
+}
+
+.login-container{
+    @media(max-width:900px){
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:900px){
+    .login-imagen{
+        display:none;
+    }
+    .login-card{
+        padding:40px 30px;
     }
 }

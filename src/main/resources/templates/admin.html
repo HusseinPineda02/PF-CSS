@@ -1,93 +1,52 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Administrador</title>
-
-<link rel="stylesheet" href="/css/main.css">
-
+    <meta charset="UTF-8">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">
+            <h2>UTP Marketplace | Administrador </h2>
+        </div>
+        <ul class="menu">
+            <li><a href="/admin">Inicio</a></li>
+            <li><a href="/admin/productos">Productos</a></li>
+            <li><a href="/logout">Cerrar sesión</a></li>
+        </ul>
+        </nav>
+    </header>
 
-<header>
+    <main>
+        <section class="catalogo">
+            <h1>
+                Panel del Administrador
+            </h1>
+            <p>
+                Administra el Marketplace desde un solo lugar.
+            </p>
+            <div class="categorias-grid">
+                <div class="categoria-card">
+                    <h2>Productos</h2>
+                    <h1>8</h1>
+                </div>
+                <div class="categoria-card">
+                    <h2>Usuarios</h2>
+                    <h1>2</h1>
+                </div>
+            </div>
+            <br><br>
+            <a
+                href="/admin/productos"
+                class="boton">
+                Administrar productos
+            </a>
+        </section>
 
-<nav class="navbar">
-
-<div class="logo">
-
-<h2>UTP Marketplace | Administrador </h2>
-
-</div>
-
-<ul class="menu">
-
-<li><a href="/admin">Inicio</a></li>
-
-<li><a href="/admin/productos">Productos</a></li>
-
-<li><a href="/logout">Cerrar sesión</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<main>
-
-<section class="catalogo">
-
-<h1>
-
-Panel del Administrador
-
-</h1>
-
-<p>
-
-Administra el Marketplace desde un solo lugar.
-
-</p>
-
-<div class="categorias-grid">
-
-<div class="categoria-card">
-
-<h2>Productos</h2>
-
-<h1>8</h1>
-
-</div>
-
-<div class="categoria-card">
-
-<h2>Usuarios</h2>
-
-<h1>2</h1>
-
-</div>
-
-</div>
-
-<br><br>
-
-<a
-href="/admin/productos"
-class="boton">
-
-Administrar productos
-
-</a>
-
-</section>
-
-</main>
+    </main>
 
 </body>
-
 </html>

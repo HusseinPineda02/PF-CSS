@@ -1,50 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
     <meta charset="UTF-8">
-
-    <title>Iniciar sesión</title>
+    <title>Iniciar sesión | UTP Marketplace</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
 
 </head>
 
-<body class="login-body">
+<body class="login-page">
 
-<div class="login-card">
+    <div class="login-container">
 
-    <h1>UTP Marketplace</h1>
+        <div class="login-imagen">
 
-    <p>Compra y venta entre estudiantes</p>
+            <img th:src="@{/img/hero.jpg}" alt="Marketplace">
 
-    <form action="/login" method="post">
+        </div>
 
-        <input
-            type="text"
-            name="usuario"
-            placeholder="Usuario"
-            required>
+        <div class="login-card">
 
-        <input
-            type="password"
-            name="password"
-            placeholder="Contraseña"
-            required>
+            <h1>UTP Marketplace</h1>
 
-        <button class="boton">
+            <h2>Bienvenido</h2>
 
-            Ingresar
+            <p>
+                Inicie sesión para acceder al Marketplace de la Universidad Tecnológica del Perú.
+            </p>
 
-        </button>
+            <form action="/login" method="post">
 
-    </form>
+                <label>Usuario</label>
 
-</div>
+                <input
+                        type="text"
+                        name="usuario"
+                        placeholder="Ingrese su usuario"
+                        required>
+
+                <label>Contraseña</label>
+
+                <input
+                        type="password"
+                        name="password"
+                        placeholder="Ingrese su contraseña"
+                        required>
+
+                <button class="boton">
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </body>
 
